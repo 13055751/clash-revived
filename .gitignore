@@ -1,0 +1,22 @@
+# 构建产物
+core/libclash.so
+core/core-linux
+core/probe-arm64
+*.apk
+*.so
+dist/
+
+# 离线依赖（体积大、可再生）
+core/assets/geoip.metadb
+tools/gopath*/
+tools/dl/
+tools/go*/
+tools/android/
+
+# 私钥（务必不要提交）
+tools/keys/apk.key.pem
+
+# 系统杂项
+__pycache__/
+*.pyc
+.DS_Store

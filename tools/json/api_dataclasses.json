@@ -1,0 +1,2416 @@
+{
+ "API": [
+  {
+   "name": "bandwidth",
+   "type": "General"
+  },
+  {
+   "name": "connections",
+   "type": "General"
+  },
+  {
+   "name": "coroutineScope",
+   "type": "CoroutineScope"
+  },
+  {
+   "name": "events",
+   "type": "Events"
+  },
+  {
+   "name": "executor",
+   "type": "General"
+  },
+  {
+   "name": "general",
+   "type": "General"
+  },
+  {
+   "name": "http",
+   "type": "Http"
+  },
+  {
+   "name": "listeners",
+   "type": "General"
+  },
+  {
+   "name": "network",
+   "type": "General"
+  },
+  {
+   "name": "profiles",
+   "type": "Profiles"
+  },
+  {
+   "name": "proxies",
+   "type": "General"
+  },
+  {
+   "name": "proxyProviders",
+   "type": "ProxyProviders"
+  },
+  {
+   "name": "ruleProviders",
+   "type": "RuleProviders"
+  },
+  {
+   "name": "sessions",
+   "type": "General"
+  },
+  {
+   "name": "traffic",
+   "type": "General"
+  },
+  {
+   "name": "ws",
+   "type": "Http"
+  }
+ ],
+ "Connections$Count": [
+  {
+   "name": "history",
+   "type": "J"
+  },
+  {
+   "name": "now",
+   "type": "J"
+  }
+ ],
+ "Events$Event$Payload": [
+  {
+   "name": "event",
+   "type": "JsonElement"
+  },
+  {
+   "name": "source",
+   "type": "Events$Event$Payload$Source"
+  }
+ ],
+ "Events": [
+  {
+   "name": "api",
+   "type": "API"
+  },
+  {
+   "name": "events",
+   "type": "ReadonlySharedFlow"
+  }
+ ],
+ "Executor$Config": [
+  {
+   "name": "activeProfile",
+   "type": "UUID"
+  },
+  {
+   "name": "externalController",
+   "type": "String"
+  },
+  {
+   "name": "externalControllerSecret",
+   "type": "String"
+  }
+ ],
+ "Executor$Status": [
+  {
+   "name": "error",
+   "type": "String"
+  },
+  {
+   "name": "profileId",
+   "type": "UUID"
+  },
+  {
+   "name": "type",
+   "type": "Executor$Status$Type"
+  }
+ ],
+ "General$Config": [
+  {
+   "name": "mode",
+   "type": "General$Config$Mode"
+  }
+ ],
+ "General": [
+  {
+   "name": "api",
+   "type": "API"
+  }
+ ],
+ "Listeners$Listener$All": [
+  {
+   "name": "listeners",
+   "type": "Map"
+  }
+ ],
+ "Listeners$Listener$Config$VPN$AccessControlConfig": [
+  {
+   "name": "mode",
+   "type": "Listeners$Listener$Config$VPN$AccessControlConfig$Mode"
+  },
+  {
+   "name": "packages",
+   "type": "List"
+  }
+ ],
+ "Listeners$Listener$Config$VPN$SystemProxyConfig": [
+  {
+   "name": "enabled",
+   "type": "Z"
+  },
+  {
+   "name": "excludes",
+   "type": "List"
+  }
+ ],
+ "Listeners$Listener": [
+  {
+   "name": "enabled",
+   "type": "Z"
+  },
+  {
+   "name": "status",
+   "type": "Listeners$Listener$Status"
+  }
+ ],
+ "Listeners$setEnabled$PutEnabled": [
+  {
+   "name": "enabled",
+   "type": "Z"
+  }
+ ],
+ "Network$FakeIP": [
+  {
+   "name": "enabled",
+   "type": "Z"
+  },
+  {
+   "name": "filter",
+   "type": "List"
+  },
+  {
+   "name": "range",
+   "type": "String"
+  }
+ ],
+ "Network$Interface": [
+  {
+   "name": "autoDetect",
+   "type": "Boolean"
+  },
+  {
+   "name": "name",
+   "type": "String"
+  }
+ ],
+ "Network$Outbound": [
+  {
+   "name": "ipv6",
+   "type": "Z"
+  }
+ ],
+ "Network$Resolver$FallbackFilter": [
+  {
+   "name": "domains",
+   "type": "List"
+  },
+  {
+   "name": "geoip",
+   "type": "Z"
+  },
+  {
+   "name": "geoipCode",
+   "type": "String"
+  },
+  {
+   "name": "ipcidr",
+   "type": "List"
+  }
+ ],
+ "Network$Resolver": [
+  {
+   "name": "bootstrapServers",
+   "type": "List"
+  },
+  {
+   "name": "fallbackFilter",
+   "type": "Network$Resolver$FallbackFilter"
+  },
+  {
+   "name": "fallbackServers",
+   "type": "List"
+  },
+  {
+   "name": "nameServerPolicy",
+   "type": "Map"
+  },
+  {
+   "name": "primaryServers",
+   "type": "List"
+  }
+ ],
+ "Profiles$Config$Updater$Notify": [
+  {
+   "name": "onFailure",
+   "type": "Z"
+  },
+  {
+   "name": "onSuccess",
+   "type": "Z"
+  }
+ ],
+ "Profiles$Config$Updater": [
+  {
+   "name": "maxRetryCount",
+   "type": "I"
+  },
+  {
+   "name": "notify",
+   "type": "Profiles$Config$Updater$Notify"
+  },
+  {
+   "name": "withTunnel",
+   "type": "Z"
+  }
+ ],
+ "Profiles$Config": [
+  {
+   "name": "updater",
+   "type": "Profiles$Config$Updater"
+  }
+ ],
+ "Profiles$Profile$All": [
+  {
+   "name": "profiles",
+   "type": "List"
+  }
+ ],
+ "Profiles$Profile$Attributes": [
+  {
+   "name": "name",
+   "type": "String"
+  },
+  {
+   "name": "remoteURL",
+   "type": "String"
+  },
+  {
+   "name": "updateExpr",
+   "type": "String"
+  },
+  {
+   "name": "updatedAt",
+   "type": "Instant"
+  }
+ ],
+ "Profiles$Profile$UserInfo": [
+  {
+   "name": "download",
+   "type": "J"
+  },
+  {
+   "name": "expireAt",
+   "type": "Instant"
+  },
+  {
+   "name": "total",
+   "type": "J"
+  },
+  {
+   "name": "upload",
+   "type": "J"
+  }
+ ],
+ "Profiles$Profile": [
+  {
+   "name": "attributes",
+   "type": "Profiles$Profile$Attributes"
+  },
+  {
+   "name": "id",
+   "type": "UUID"
+  },
+  {
+   "name": "userInfo",
+   "type": "Profiles$Profile$UserInfo"
+  }
+ ],
+ "Profiles": [
+  {
+   "name": "api",
+   "type": "API"
+  }
+ ],
+ "Providers$Provider$All": [
+  {
+   "name": "providers",
+   "type": "Map"
+  }
+ ],
+ "Providers$Provider": [
+  {
+   "name": "name",
+   "type": "String"
+  },
+  {
+   "name": "proxies",
+   "type": "List"
+  },
+  {
+   "name": "type",
+   "type": "Providers$Type"
+  },
+  {
+   "name": "updatedAt",
+   "type": "Instant"
+  },
+  {
+   "name": "vehicleType",
+   "type": "Vehicle$Type"
+  }
+ ],
+ "Proxies$Proxy$Delay": [
+  {
+   "name": "delay",
+   "type": "I"
+  },
+  {
+   "name": "meanDelay",
+   "type": "I"
+  },
+  {
+   "name": "time",
+   "type": "Instant"
+  }
+ ],
+ "Proxies$Proxy": [
+  {
+   "name": "history",
+   "type": "List"
+  },
+  {
+   "name": "name",
+   "type": "String"
+  },
+  {
+   "name": "now",
+   "type": "String"
+  },
+  {
+   "name": "providers",
+   "type": "List"
+  },
+  {
+   "name": "proxies",
+   "type": "List"
+  },
+  {
+   "name": "type",
+   "type": "Proxies$Type"
+  },
+  {
+   "name": "udp",
+   "type": "Z"
+  }
+ ],
+ "Proxies$Type": [
+  {
+   "name": "group",
+   "type": "Z"
+  }
+ ],
+ "Proxies$put$PutProxy": [
+  {
+   "name": "name",
+   "type": "String"
+  }
+ ],
+ "ProxyProviders": [
+  {
+   "name": "api",
+   "type": "API"
+  }
+ ],
+ "RuleProviders": [
+  {
+   "name": "api",
+   "type": "API"
+  }
+ ],
+ "Sessions$CreateSessionSpec": [
+  {
+   "name": "fileContent",
+   "type": "String"
+  },
+  {
+   "name": "fileName",
+   "type": "String"
+  },
+  {
+   "name": "profileId",
+   "type": "UUID"
+  },
+  {
+   "name": "type",
+   "type": "Sessions$CreateSessionSpec$Type"
+  },
+  {
+   "name": "url",
+   "type": "String"
+  }
+ ],
+ "Sessions$ProviderDescriptor$All": [
+  {
+   "name": "providers",
+   "type": "List"
+  }
+ ],
+ "Sessions$ProviderDescriptor": [
+  {
+   "name": "length",
+   "type": "I"
+  },
+  {
+   "name": "name",
+   "type": "String"
+  },
+  {
+   "name": "type",
+   "type": "Providers$Type"
+  },
+  {
+   "name": "vehicleType",
+   "type": "Vehicle$Type"
+  }
+ ],
+ "Sessions$StoreStatus$CompletionProgress": [
+  {
+   "name": "completed",
+   "type": "I"
+  },
+  {
+   "name": "total",
+   "type": "I"
+  }
+ ],
+ "Sessions$StoreStatus": [
+  {
+   "name": "error",
+   "type": "String"
+  },
+  {
+   "name": "providerProgress",
+   "type": "Sessions$StoreStatus$CompletionProgress"
+  },
+  {
+   "name": "stage",
+   "type": "Sessions$StoreStatus$Stage"
+  }
+ ],
+ "Sessions$newSession$Result": [
+  {
+   "name": "sessionId",
+   "type": "UUID"
+  }
+ ],
+ "Transmit$Bytes": [
+  {
+   "name": "directDown",
+   "type": "J"
+  },
+  {
+   "name": "directUp",
+   "type": "J"
+  },
+  {
+   "name": "down",
+   "type": "J"
+  },
+  {
+   "name": "proxyDown",
+   "type": "J"
+  },
+  {
+   "name": "proxyUp",
+   "type": "J"
+  },
+  {
+   "name": "up",
+   "type": "J"
+  }
+ ],
+ "Client": [
+  {
+   "name": "okHttp",
+   "type": "OkHttpClient"
+  }
+ ],
+ "Http": [
+  {
+   "name": "baseUrl",
+   "type": "HttpUrl"
+  },
+  {
+   "name": "client",
+   "type": "Client"
+  }
+ ],
+ "RemoteError": [
+  {
+   "name": "message",
+   "type": "String"
+  }
+ ],
+ "ResponseException": [
+  {
+   "name": "error",
+   "type": "RemoteError"
+  }
+ ],
+ "WebSocket$openRaw$3$listener$1": [
+  {
+   "name": "$$this$withContext",
+   "type": "CoroutineScope"
+  },
+  {
+   "name": "$receiver",
+   "type": "Channel"
+  }
+ ],
+ "Events$Event$Executor": [
+  {
+   "name": "type",
+   "type": "Events$Event$Executor$Type"
+  }
+ ],
+ "Events$Event$Listener": [
+  {
+   "name": "listenerType",
+   "type": "Listeners$Type"
+  },
+  {
+   "name": "type",
+   "type": "Events$Event$Listener$Type"
+  }
+ ],
+ "Events$Event$Profile": [
+  {
+   "name": "type",
+   "type": "Events$Event$Profile$Type"
+  },
+  {
+   "name": "uuid",
+   "type": "UUID"
+  }
+ ],
+ "Listeners$Listener$Config$DNS": [
+  {
+   "name": "ipv6",
+   "type": "Z"
+  },
+  {
+   "name": "listenAt",
+   "type": "String"
+  },
+  {
+   "name": "useHosts",
+   "type": "Z"
+  }
+ ],
+ "Listeners$Listener$Config$ExternalController": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  },
+  {
+   "name": "secret",
+   "type": "String"
+  }
+ ],
+ "Listeners$Listener$Config$HTTPSocks5": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  },
+  {
+   "name": "users",
+   "type": "Map"
+  }
+ ],
+ "Listeners$Listener$Config$Redirect": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  }
+ ],
+ "Listeners$Listener$Config$SystemProxy": [
+  {
+   "name": "excludes",
+   "type": "List"
+  },
+  {
+   "name": "listenAddr",
+   "type": "String"
+  }
+ ],
+ "Listeners$Listener$Config$TUN": [
+  {
+   "name": "address",
+   "type": "String"
+  },
+  {
+   "name": "autoRoute",
+   "type": "Z"
+  },
+  {
+   "name": "boost",
+   "type": "Z"
+  },
+  {
+   "name": "dnsHijack",
+   "type": "Z"
+  }
+ ],
+ "Listeners$Listener$Config$TransProxy": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  }
+ ],
+ "Listeners$Listener$Config$VPN": [
+  {
+   "name": "accessControl",
+   "type": "Listeners$Listener$Config$VPN$AccessControlConfig"
+  },
+  {
+   "name": "dnsHijack",
+   "type": "Z"
+  },
+  {
+   "name": "routeMode",
+   "type": "Listeners$Listener$Config$VPN$RouteMode"
+  },
+  {
+   "name": "systemProxy",
+   "type": "Listeners$Listener$Config$VPN$SystemProxyConfig"
+  }
+ ],
+ "Listeners$Listener$Status$DNS": [
+  {
+   "name": "ipv6",
+   "type": "Z"
+  },
+  {
+   "name": "listenAt",
+   "type": "String"
+  },
+  {
+   "name": "useHosts",
+   "type": "Z"
+  }
+ ],
+ "Listeners$Listener$Status$ExternalController": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  },
+  {
+   "name": "secret",
+   "type": "String"
+  }
+ ],
+ "Listeners$Listener$Status$HTTPSocks5": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  },
+  {
+   "name": "users",
+   "type": "List"
+  }
+ ],
+ "Listeners$Listener$Status$Redirect": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  }
+ ],
+ "Listeners$Listener$Status$SystemProxy": [
+  {
+   "name": "excludes",
+   "type": "List"
+  },
+  {
+   "name": "listenAt",
+   "type": "String"
+  }
+ ],
+ "Listeners$Listener$Status$TUN": [
+  {
+   "name": "address",
+   "type": "String"
+  },
+  {
+   "name": "boosted",
+   "type": "Z"
+  },
+  {
+   "name": "dnsHijacked",
+   "type": "Z"
+  },
+  {
+   "name": "routeInserted",
+   "type": "Z"
+  }
+ ],
+ "Listeners$Listener$Status$TransProxy": [
+  {
+   "name": "listenAt",
+   "type": "String"
+  },
+  {
+   "name": "udp",
+   "type": "Z"
+  }
+ ],
+ "Listeners$Listener$Status$VPN": [
+  {
+   "name": "dnsHijacked",
+   "type": "Z"
+  },
+  {
+   "name": "hasChanges",
+   "type": "Z"
+  },
+  {
+   "name": "systemProxyListening",
+   "type": "Z"
+  }
+ ],
+ "Client$interceptor$1": [
+  {
+   "name": "$token",
+   "type": "String"
+  }
+ ],
+ "Http$request$3$response$1$1$1": [
+  {
+   "name": "$ctx",
+   "type": "CancellableContinuation"
+  }
+ ],
+ "WebSocket$Message$Bytes": [
+  {
+   "name": "bytes",
+   "type": "[B"
+  }
+ ],
+ "WebSocket$Message$Text": [
+  {
+   "name": "text",
+   "type": "String"
+  }
+ ],
+ "WebSocketSession$Impl": [
+  {
+   "name": "$$delegate_0",
+   "type": "CoroutineScope"
+  },
+  {
+   "name": "receiver",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "sender",
+   "type": "SendChannel"
+  }
+ ],
+ "Listeners$getAll$1": [
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "result",
+   "type": "Object"
+  },
+  {
+   "name": "this$0",
+   "type": "General"
+  }
+ ],
+ "LocalKt$LocalAPI$1": [
+  {
+   "name": "$r8$classId",
+   "type": "I"
+  }
+ ],
+ "LocalKt$WithAPI$2": [
+  {
+   "name": "$$dirty",
+   "type": "I"
+  },
+  {
+   "name": "$block",
+   "type": "Function2"
+  },
+  {
+   "name": "$r8$classId",
+   "type": "I"
+  }
+ ],
+ "Profiles$getAll$1": [
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "result",
+   "type": "Object"
+  },
+  {
+   "name": "this$0",
+   "type": "Profiles"
+  }
+ ],
+ "ProxyProviders$getAll$1": [
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "result",
+   "type": "Object"
+  },
+  {
+   "name": "this$0",
+   "type": "ProxyProviders"
+  }
+ ],
+ "RuleProviders$getAll$1": [
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "result",
+   "type": "Object"
+  },
+  {
+   "name": "this$0",
+   "type": "RuleProviders"
+  }
+ ],
+ "Sessions$getProviders$1": [
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "result",
+   "type": "Object"
+  },
+  {
+   "name": "this$0",
+   "type": "General"
+  }
+ ],
+ "Sessions$newSession$1": [
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "result",
+   "type": "Object"
+  },
+  {
+   "name": "this$0",
+   "type": "General"
+  }
+ ],
+ "Client$1": [
+  {
+   "name": "$r8$classId",
+   "type": "I"
+  },
+  {
+   "name": "$token",
+   "type": "String"
+  }
+ ],
+ "Http$request$3$2": [
+  {
+   "name": "$method",
+   "type": "Object"
+  },
+  {
+   "name": "$path",
+   "type": "Object"
+  },
+  {
+   "name": "$r8$classId",
+   "type": "I"
+  },
+  {
+   "name": "$response",
+   "type": "Object"
+  }
+ ],
+ "Bandwidth$poll$1$1$1": [
+  {
+   "name": "$$this$channelFlow",
+   "type": "ProducerScope"
+  },
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "L$2",
+   "type": "BufferedChannel$BufferedChannelIterator"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "Bandwidth$poll$1": [
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "General"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "General"
+  }
+ ],
+ "Bandwidth$reset$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Connections$countPoll$1$1$1": [
+  {
+   "name": "$$this$channelFlow",
+   "type": "ProducerScope"
+  },
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "L$2",
+   "type": "BufferedChannel$BufferedChannelIterator"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "Connections$countPoll$1": [
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "General"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "General"
+  }
+ ],
+ "Connections$countReset$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Events$events$1$1$1": [
+  {
+   "name": "$$this$channelFlow",
+   "type": "ProducerScope"
+  },
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "L$2",
+   "type": "BufferedChannel$BufferedChannelIterator"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "Events$events$1": [
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "Events"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Events"
+  }
+ ],
+ "Executor$getConfig$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Executor$patchConfig$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Executor$status$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "General$get$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "General$patch$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Listeners$getAll$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Listeners$getConfig$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Listeners$patchConfig$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Listeners$setEnabled$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$getFakeIP$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$getHosts$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$getInterface$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$getOutbound$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$getResolver$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$patchFakeIP$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$patchHosts$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$patchInterface$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$patchOutbound$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Network$patchResolver$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Profiles$delete$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Profiles$get$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Profiles$getAll$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Profiles$getConfig$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Profiles$patchConfig$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Profiles$update$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Proxies$get$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Proxies$put$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "ProxyProviders$get$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "ProxyProviders$getAll$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "ProxyProviders$test$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "ProxyProviders$test$$inlined$request$default$2": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "ProxyProviders$update$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "RuleProviders$getAll$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "RuleProviders$update$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$deleteSession$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$getAttributes$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$getConfig$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$getProvider$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$getProviders$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$newSession$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$putAttributes$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$putConfig$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$putProvider$$inlined$request$default$1": [
+  {
+   "name": "$body",
+   "type": "Object"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Sessions$store$3": [
+  {
+   "name": "$onProgressUpdated",
+   "type": "Function1"
+  },
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "Sessions$updateConfig$$inlined$request$default$1": [
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "Traffic$poll$1$1$1": [
+  {
+   "name": "$$this$channelFlow",
+   "type": "ProducerScope"
+  },
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "L$2",
+   "type": "BufferedChannel$BufferedChannelIterator"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "Traffic$poll$1": [
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "General"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "General"
+  }
+ ],
+ "Http$request$3": [
+  {
+   "name": "$body",
+   "type": "RequestBody$Companion$toRequestBody$2"
+  },
+  {
+   "name": "$builder",
+   "type": "Function1"
+  },
+  {
+   "name": "$method",
+   "type": "RequestBuilder$Method"
+  },
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "L$0",
+   "type": "HttpUrl$Builder"
+  },
+  {
+   "name": "L$1",
+   "type": "Request$Builder"
+  },
+  {
+   "name": "L$2",
+   "type": "Http"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ],
+ "WebSocket$open$3$1": [
+  {
+   "name": "$$this$openRaw",
+   "type": "WebSocketSession"
+  },
+  {
+   "name": "$rx",
+   "type": "Channel"
+  },
+  {
+   "name": "$rxSerializer",
+   "type": "KSerializer"
+  },
+  {
+   "name": "L$0",
+   "type": "Channel"
+  },
+  {
+   "name": "L$1",
+   "type": "KSerializer"
+  },
+  {
+   "name": "L$2",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "L$3",
+   "type": "BufferedChannel$BufferedChannelIterator"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "WebSocket$open$3$2": [
+  {
+   "name": "$$this$openRaw",
+   "type": "WebSocketSession"
+  },
+  {
+   "name": "$tx",
+   "type": "Channel"
+  },
+  {
+   "name": "$txSerializer",
+   "type": "KSerializer"
+  },
+  {
+   "name": "L$0",
+   "type": "WebSocketSession"
+  },
+  {
+   "name": "L$1",
+   "type": "KSerializer"
+  },
+  {
+   "name": "L$2",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "L$3",
+   "type": "BufferedChannel$BufferedChannelIterator"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "WebSocket$open$3": [
+  {
+   "name": "$rxSerializer",
+   "type": "KSerializer"
+  },
+  {
+   "name": "$session",
+   "type": "Function2"
+  },
+  {
+   "name": "$txSerializer",
+   "type": "KSerializer"
+  },
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "WebSocket$openRaw$3$4$1": [
+  {
+   "name": "$receiver",
+   "type": "Channel"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "WebSocket$openRaw$3$4": [
+  {
+   "name": "$receiver",
+   "type": "Channel"
+  },
+  {
+   "name": "$ws",
+   "type": "WebSocket"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "WebSocket$openRaw$3$senderJob$1": [
+  {
+   "name": "$sender",
+   "type": "Channel"
+  },
+  {
+   "name": "$ws",
+   "type": "WebSocket"
+  },
+  {
+   "name": "L$0",
+   "type": "WebSocket"
+  },
+  {
+   "name": "L$1",
+   "type": "ReceiveChannel"
+  },
+  {
+   "name": "L$2",
+   "type": "BufferedChannel$BufferedChannelIterator"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  }
+ ],
+ "WebSocket$openRaw$3": [
+  {
+   "name": "$path",
+   "type": "String"
+  },
+  {
+   "name": "$reqBuilder",
+   "type": "Function1"
+  },
+  {
+   "name": "$session",
+   "type": "Function2"
+  },
+  {
+   "name": "L$0",
+   "type": "Object"
+  },
+  {
+   "name": "L$1",
+   "type": "RealWebSocket"
+  },
+  {
+   "name": "L$2",
+   "type": "StandaloneCoroutine"
+  },
+  {
+   "name": "label",
+   "type": "I"
+  },
+  {
+   "name": "this$0",
+   "type": "Http"
+  }
+ ]
+}

@@ -1,0 +1,63 @@
+{
+ "Events$Event$Executor$Type": [
+  "ConfigChanged",
+  "GeneralChanged",
+  "StatusChanged"
+ ],
+ "Events$Event$Listener$Type": [
+  "ConfigChanged",
+  "StatusChanged"
+ ],
+ "Events$Event$Profile$Type": [
+  "Added",
+  "Modified",
+  "Reconfigured",
+  "Removed"
+ ],
+ "General$Config$Mode": [
+  "Direct",
+  "Global",
+  "Rule",
+  "Script"
+ ],
+ "Listeners$Listener$Config$VPN$AccessControlConfig$Mode": [
+  "AllowAll",
+  "AllowPackages",
+  "DisallowPackages"
+ ],
+ "Listeners$Listener$Config$VPN$RouteMode": [
+  "AsDefault",
+  "ExcludesPrivate",
+  "None"
+ ],
+ "Listeners$Type": [
+  "DNS",
+  "ExternalController",
+  "HTTPSocks5",
+  "Redirect",
+  "SystemProxy",
+  "TUN",
+  "TransProxy",
+  "VPN"
+ ],
+ "Proxies$Type": [
+  "Direct",
+  "Selector"
+ ],
+ "Sessions$CreateSessionSpec$Type": [
+  "Edit",
+  "NewFile",
+  "NewURL"
+ ],
+ "Vehicle$Type": [
+  "File",
+  "HTTP"
+ ],
+ "RequestBuilder$Method": [
+  "DELETE",
+  "GET",
+  "PATCH",
+  "POST",
+  "PUT"
+ ]
+}
